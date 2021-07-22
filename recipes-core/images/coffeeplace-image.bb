@@ -3,7 +3,11 @@ LICENSE = "MIT"
 
 inherit core-image
 
-DEPENDS += "bcm2835-bootfiles"
+# for Raspberry Pi 1 and Zero
+#DEPENDS += "bcm2835-bootfiles"
+
+# for Raspberry Pi 4B
+DEPENDS += "bcm2711-bootfiles"
 
 IMAGE_FEATURES += "\
     splash \
